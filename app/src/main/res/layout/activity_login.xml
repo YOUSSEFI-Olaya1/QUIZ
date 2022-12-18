@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--On a choisi le gestionnaire de mise en page RelativeLayout
+pour qu'il nous aide à organiser nos éléments D'interface utilisateur en fonction des règle.-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/back1"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:gravity="center"
+        android:text="Registration"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:textSize="20sp"
+        android:textStyle="italic">
+
+    </TextView>
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="50dp"
+        android:hint="User Name" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@+id/username"/>
+
+    <EditText
+        android:id="@+id/repassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Retype Password"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@+id/password"/>
+
+    <Button
+        android:id="@+id/btnsignup"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/repassword"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="50dp"
+        android:background="?android:attr/listChoiceIndicatorMultiple"
+        android:text="Register"
+        android:textAllCaps="true"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        app:rippleColor="@color/design_default_color_secondary_variant" />
+
+    <Button
+        android:id="@+id/btnsignin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@+id/btnsignup"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:text="Existing user! Go to Sign in page"
+        android:textColor="@color/design_default_color_background" />
+
+</RelativeLayout>

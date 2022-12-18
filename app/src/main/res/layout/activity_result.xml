@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--On a choisi le gestionnaire de mise en page RelativeLayout
+pour qu'il nous aide à organiser nos éléments D'interface utilisateur en fonction des règle.-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.projet_olaya_youssefi.ResultActivity">
+
+    <!--ici s'affiche les Emojis de  sort que chaqun exprime un score différent à l'autre
+    (il y a 6 Emojis)-->
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!--ici on a le label du résultat du score à chaque réponse vrai-->
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Users score: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp" />
+
+
+    <!--ici s'affiche la zone du résultat du score à chaque réponse vrai-->
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/scoreText"
+        android:text="5"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="35sp"
+        android:textColor="#F00"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <!--On a utilisé ici RatingBar qui se compose des étoiles et les utilisateurs en sélectionnent une pour donner une note,
+    la première étoile correspond à la note la plus faible et la dernière correspond à la note la plus élevée.
+    Le numéro des étoiles est indiqué par l'attribut="numStars"-->
+    <RatingBar
+        android:id="@+id/ratingBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        android:layout_below="@+id/score"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
